@@ -8,16 +8,12 @@ class Solution {
     }
     
     public int solve(int n){
-        
-        String str= Integer.toString(n);
-        int[] arr= new int[str.length()];
-        for(int i=0; i<str.length(); i++){
-            arr[i]=str.charAt(i)-'0';
+      
+        int sum=0;
+        while(n>0){
+            sum+=(n%10)*(n%10);
+            n=n/10;
         }
-       int sum=0;
-        for(int a: arr){
-            sum+=a*a;
-        }
-        return sum;
+      return sum;
     }
 }
