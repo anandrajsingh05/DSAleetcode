@@ -1,10 +1,15 @@
 class Solution {
     public boolean isHappy(int n) {
-        String str= Integer.toString(n);
-        System.out.println(n);
-        if(str.length()==1 && n==1)return true;
-        else if(str.length()==1 && n==4)return false;
-        return isHappy(solve(n));
+       Set<Integer> set= new HashSet<>();
+        while(!set.contains(solve(n))){
+            int res=solve(n);
+            if(res==1)return true;
+            else{
+                set.add(res);
+                n=res;
+            }
+        }
+        return false;
     }
     
     public int solve(int n){
