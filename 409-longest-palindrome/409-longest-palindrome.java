@@ -17,13 +17,10 @@ class Solution {
                  sum+=a;
             }
             else{
-                if(a!=1){
                     sum+=(a-1);
-                }
             } 
         }
-        if(map.size()==1)return map.get(s.charAt(0));
-        else if(sum==s.length())return sum;
+        if(sum==s.length())return sum;
         return sum+1;
         
     }
