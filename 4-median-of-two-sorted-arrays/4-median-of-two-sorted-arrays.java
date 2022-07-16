@@ -27,9 +27,7 @@ class Solution {
             j++;
             index++;
         }
-        // for(int a: arr){
-        //     System.out.print(a+" ");
-        // }
+        
         double res=0;
         if(n%2==1) res= (double)arr[n/2];
         else res= (double)(arr[n/2]+arr[(n-1)/2])/2;
