@@ -5,22 +5,20 @@ class Solution {
         int maxArea=Integer.MIN_VALUE;
         while(i<j){
             int minHeight=0;
-             int distance=0;
+            int distance=j-i;
             int area=0;
             if(height[i]<height[j]){
                 minHeight=height[i];
-                 distance = j-i;
-                area= minHeight*distance;
-                if(area>maxArea) maxArea= area;
                 i++;
             }
             else {
-                 minHeight=height[j];
-                 distance = j-i;
-                area= minHeight*distance;
-                if(area>maxArea) maxArea= area;
+                minHeight=height[j];
                 j--;
-            }   
+            } 
+            
+            area= minHeight*distance;
+            if(area>maxArea) maxArea= area;
+            
         }
         return maxArea;
     }
