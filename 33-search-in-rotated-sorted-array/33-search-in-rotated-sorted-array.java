@@ -5,14 +5,11 @@ class Solution {
        else if(nums.length==1 && nums[0]!=target) return -1;
         
         int pivot= pivot(nums);
-        
         int left=binSearch(nums,target,0,pivot);
         int right=binSearch(nums,target,pivot+1,nums.length-1);
-       
         int res=Math.max(left,right);
         return res;
-       
-        
+      
     }
     
     public int pivot(int[] arr){
@@ -23,8 +20,7 @@ class Solution {
             int mid= l+(r-l)/2;
             if(mid !=arr.length-1 && arr[mid]>arr[mid+1]) return mid;
             else if(arr[0]>arr[mid]){
-                r=mid-1;
-                
+                r=mid-1; 
             }
             else l=mid+1;
         }
