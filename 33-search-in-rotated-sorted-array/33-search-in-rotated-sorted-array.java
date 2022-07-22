@@ -3,11 +3,12 @@ class Solution {
         
         if(nums.length==1 && nums[0]==target) return 0;
        else if(nums.length==1 && nums[0]!=target) return -1;
+        
         int pivot= pivot(nums);
-        // System.out.println(pivot);
+        
         int left=binSearch(nums,target,0,pivot);
         int right=binSearch(nums,target,pivot+1,nums.length-1);
-        // System.out.println(left+" "+right);
+       
         int res=Math.max(left,right);
         return res;
        
@@ -29,9 +30,6 @@ class Solution {
         }
        return -1;
     }
-    
-    
-    
     
     public int binSearch(int[] arr, int k, int l, int r){
        
