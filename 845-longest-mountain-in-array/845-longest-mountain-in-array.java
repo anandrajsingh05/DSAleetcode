@@ -15,7 +15,9 @@ class Solution {
                         end++;
                     }
                     
-                   res= Math.max(res,end-start+1);
+                   if(end-start+1 > res){
+                       res=end-start+1;
+                   }
                 }
                   
             }
