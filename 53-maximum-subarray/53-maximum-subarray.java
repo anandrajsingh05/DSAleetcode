@@ -7,6 +7,7 @@ class Solution {
             if(sum>max){
                 max=sum;
             }
+            System.out.println(sum);
             if(sum<0){
                 sum=0;
             }
