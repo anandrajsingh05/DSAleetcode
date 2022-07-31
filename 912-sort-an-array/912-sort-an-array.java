@@ -17,6 +17,8 @@ class Solution {
     
     public int partition(int[] arr, int low, int high){
        
+        int index= (int)(Math.random()*(high-low)+low);
+        swap(arr,index,low);
         int pivot=arr[low];
         int i=low;
         int j=high;
