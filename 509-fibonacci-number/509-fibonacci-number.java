@@ -1,7 +1,6 @@
 class Solution {
     public int fib(int n) {
         
-        // int[] arr= new int[31];
         if(n==0 || n==1) return n;
         int first=0;
         int second=1;
