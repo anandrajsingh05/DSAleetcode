@@ -12,7 +12,7 @@ class Solution {
                 map.put(magazine.charAt(i), count-1);
             }
         }
-        System.out.println(map);
+       
         for(int a : map.values()){
             if(a!=0) return false;
         }
