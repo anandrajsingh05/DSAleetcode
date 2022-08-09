@@ -23,7 +23,6 @@ class Solution {
                 pre=cur;
                 cur=cur.next;
             }
-            // System.out.println(123);
             else{
                 pre.next=cur.next;
                 cur=pre.next;
