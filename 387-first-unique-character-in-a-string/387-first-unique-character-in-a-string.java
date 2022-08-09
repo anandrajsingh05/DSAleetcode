@@ -3,12 +3,8 @@ class Solution {
         Map<Character,Integer> map= new LinkedHashMap<>();
         int index= -1;
         for(int i=0; i<s.length(); i++){
-            if(map.containsKey(s.charAt(i))){
-                map.put(s.charAt(i), map.get(s.charAt(i))+1);
-            }
-            else{
-                map.put(s.charAt(i),1);
-            } 
+            Integer count=map.get(s.charAt(i));
+            map.put(s.charAt(i), count!=null ? count+1 : 1);
         }
         
         for(int i=0; i<s.length(); i++){
