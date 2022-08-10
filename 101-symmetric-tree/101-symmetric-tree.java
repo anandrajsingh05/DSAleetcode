@@ -15,14 +15,12 @@
  */
 class Solution {
     public boolean isSymmetric(TreeNode root) {
-      return  solve(root.left,root.right);
-        
+        return solve(root.left, root.right);
     }
-    
     public boolean solve(TreeNode root1, TreeNode root2){
         if(root1==null && root2==null) return true;
         if(root1!=null && root2!=null && root1.val==root2.val){
-            return solve(root1.left, root2.right) && solve(root1.right, root2.left);
+            return solve(root1.left,root2.right) && solve(root1.right, root2.left);
         }
         return false;
     }
