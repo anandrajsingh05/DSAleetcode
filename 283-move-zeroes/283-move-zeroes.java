@@ -7,14 +7,10 @@ class Solution {
                 i++;
                 j++;
             }
-            else{
-                
-                 while(j<nums.length && nums[j]==0) j++;
-                if(j<nums.length && nums[i]==0){
-                    swap(nums,i,j);
-                    i++;
-                    j++;
-                }
+            else if(nums[j]==0) j++;
+            if(j<nums.length && nums[i]==0 && nums[j]!=0){
+                swap(nums,i,j);
+                i++;
             }
               
         }
