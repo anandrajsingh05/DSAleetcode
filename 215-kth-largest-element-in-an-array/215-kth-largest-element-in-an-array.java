@@ -6,10 +6,10 @@ class Solution {
         }
         
         while(pq.size()>k){
-            pq.remove();
+            pq.poll();
         }
         
-        return pq.remove();
+        return pq.peek();
         
     }
 }
